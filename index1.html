@@ -1,0 +1,66 @@
+<div class="app-container">
+    <h1>CAL PHYSICS LOVER</h1>
+    <p class="tagline">The Complete Basic & Advanced Physics Portal</p>
+    
+    <div class="panel-box">
+        <label class="label-text">1. Enter Gemini API Key First:</label>
+        <input type="password" id="apiKey" placeholder="Paste your API key here...">
+    </div>
+
+    <!-- AI SOLVER -->
+    <div class="panel-box">
+        <div class="section-title">🌌 Physics Question Solver (With Steps)</div>
+        <div class="input-row">
+            <textarea id="question" rows="4" placeholder="Type or use the microphone to ask your basic or advanced physics question..."></textarea>
+            <button class="voice-btn" id="voiceBtn" onclick="toggleVoice()" title="Voice to Text">🎙️</button>
+        </div>
+        <button class="action-btn" onclick="askPhysicsAI()">Solve with Full Breakdown</button>
+        <div id="outputBox" class="output-box"></div>
+    </div>
+
+    <!-- CALCULATOR -->
+    <div class="panel-box">
+        <div class="section-title">🔢 Scientific Calculator</div>
+        <input type="text" id="calcScreen" value="0" readonly style="text-align:right; font-size:1.5rem; margin-bottom:15px; background: #05030f; border: 1px solid #a855f7; border-radius: 8px; color: white; padding: 12px; width: 100%; box-sizing: border-box;">
+        <div class="calc-grid">
+            <button class="calc-btn" onclick="clearCalc()">C</button>
+            <button class="calc-btn" onclick="pressCalc('(')">(</button>
+            <button class="calc-btn" onclick="pressCalc(')')">)</button>
+            <button class="calc-btn" onclick="pressCalc('/')">/</button>
+            <button class="calc-btn" onclick="pressCalc('7')">7</button>
+            <button class="calc-btn" onclick="pressCalc('8')">8</button>
+            <button class="calc-btn" onclick="pressCalc('9')">9</button>
+            <button class="calc-btn" onclick="pressCalc('*')">*</button>
+            <button class="calc-btn" onclick="pressCalc('4')">4</button>
+            <button class="calc-btn" onclick="pressCalc('5')">5</button>
+            <button class="calc-btn" onclick="pressCalc('6')">6</button>
+            <button class="calc-btn" onclick="pressCalc('-')">-</button>
+            <button class="calc-btn" onclick="pressCalc('1')">1</button>
+            <button class="calc-btn" onclick="pressCalc('2')">2</button>
+            <button class="calc-btn" onclick="pressCalc('3')">3</button>
+            <button class="calc-btn" onclick="pressCalc('+')">+</button>
+            <button class="calc-btn" onclick="pressCalc('0')">0</button>
+            <button class="calc-btn" onclick="pressCalc('.')">.</button>
+            <button class="calc-btn" onclick="mathFunc('Math.sqrt')">√</button>
+            <button class="calc-btn" style="background:#a855f7;" onclick="solveCalc()">=</button>
+        </div>
+    </div>
+
+    <!-- FORMULAS -->
+    <div class="panel-box">
+        <div class="section-title">📚 Physics Formula Finder</div>
+        <input type="text" id="formulaSearch" placeholder="Type to filter formulas (velocity, quantum, force)..." oninput="filterFormulas()">
+        <div class="formula-grid" id="formulaGrid">
+            <div class="formula-card" data-tags="velocity kinematics basic"><b>Velocity:</b> v = v₀ + at</div>
+            <div class="formula-card" data-tags="displacement kinematics basic"><b>Displacement:</b> d = v₀t + ½at²</div>
+            <div class="formula-card" data-tags="force law basic"><b>Newton's 2nd Law:</b> F = ma</div>
+            <div class="formula-card" data-tags="relativity einstein advanced"><b>Energy-Mass:</b> E = mc²</div>
+            <div class="formula-card" data-tags="quantum planck advanced"><b>Planck Relation:</b> E = hν</div>
+            <div class="formula-card" data-tags="schrodinger wave advanced"><b>Schrödinger:</b> iℏ∂/∂tΨ = ĤΨ</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Website engineered for <span>Cal Physics Lover</span> portal. Credits proudly attributed to <span>cal physics guy</span>.
+    </div>
+</div>

@@ -1,0 +1,72 @@
+:root {
+    --bg: #060414;
+    --panel: rgba(22, 16, 51, 0.8);
+    --border: #a855f7;
+    --text: #f3e8ff;
+    --text-dim: #a78bfa;
+}
+
+body {
+    font-family: sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+.panel-box {
+    background: var(--panel);
+    border: 2px solid var(--border);
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+h1 { text-align: center; margin: 0 0 5px 0; color: #fff; font-size: 2.8rem; }
+.tagline { text-align: center; color: var(--text-dim); margin: 0 0 25px 0; font-size: 1.1rem; }
+.label-text { display: block; margin-bottom: 5px; font-weight: bold; }
+.section-title { font-size: 1.2rem; font-weight: bold; border-bottom: 1px solid var(--border); padding-bottom: 5px; margin-bottom: 15px; color: #fff; }
+
+input, textarea {
+    width: 100%; padding: 12px; background: #05030f; border: 1px solid var(--border);
+    border-radius: 8px; color: white; box-sizing: border-box; margin-bottom: 15px; font-size: 1rem;
+}
+
+.input-row { position: relative; }
+
+.voice-btn {
+    position: absolute; right: 10px; top: 10px; width: 35px; height: 35px;
+    background: rgba(168, 85, 247, 0.3); border: 1px solid var(--border); border-radius: 50%; cursor: pointer;
+}
+
+.action-btn {
+    width: 100%; padding: 15px; background: linear-gradient(90deg, #a855f7, #6366f1);
+    border: none; border-radius: 12px; color: white; font-size: 1.1rem; font-weight: bold; cursor: pointer;
+}
+.action-btn:hover { filter: brightness(1.2); }
+
+.output-box {
+    margin-top: 20px; padding: 20px; background: #05030f; border: 1px solid var(--border);
+    border-radius: 12px; display: none; min-height: 50px; font-size: 1.05rem; line-height: 1.5; white-space: pre-wrap;
+}
+
+.calc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; max-width: 300px; margin: 0 auto; }
+.calc-btn { padding: 15px; background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: white; font-size: 1.1rem; border-radius: 8px; cursor: pointer; }
+.calc-btn:hover { background: rgba(168, 85, 247, 0.2); }
+
+.formula-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media(max-width: 600px) { .formula-grid { grid-template-columns: 1fr; } }
+.formula-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(168, 85, 247, 0.3); padding: 12px; border-radius: 8px; }
+
+.footer { text-align: center; color: rgba(243, 232, 255, 0.4); font-size: 0.9rem; margin-top: 20px; width: 100%; padding-top: 20px; }
+.footer span { color: var(--text-dim); font-weight: bold; }
